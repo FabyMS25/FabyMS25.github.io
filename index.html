@@ -1,44 +1,531 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Faby M | Systems Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabiola Morales - Ingeniera de Software Full Stack especializada en desarrollo web">
+    <title>Fabiola Morales | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Faby M</h1>
-        <p>Systems Engineer | Frontend Developer | Data Visualization</p>
-    </header>
-
-    <section class="about">
-        <h2>About Me</h2>
-        <p>
-            Systems Engineer specialized in dynamic dashboards, authentication systems,
-            and real-time data visualization. Passionate about clean UI and structured architecture.
-        </p>
-    </section>
-
-    <section class="projects">
-        <h2>Projects</h2>
-
-        <div class="card">
-            <h3>Air Quality Monitoring System</h3>
-            <p>Dynamic AQI dashboard connected to database with health recommendations.</p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">FM<span class="accent">.</span></a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link contact-btn">Contacto</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+    </nav>
 
-        <div class="card">
-            <h3>Authentication Dashboard</h3>
-            <p>Login system with event emission and real-time dashboard updates.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-label">Full Stack Developer</p>
+                <h1 class="hero-title">
+                    Hola, soy <span class="gradient-text">Fabiola</span><br>
+                    Ingeniera de Software
+                </h1>
+                <p class="hero-description">
+                    Especializada en crear soluciones digitales eficientes y escalables. 
+                    Experiencia en el ciclo completo de desarrollo, desde el análisis hasta la producción.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Proyectos Completados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Tecnologías</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: yourmail@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conoce más</span>
+                <h2 class="section-title">Sobre Mí</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Soy <strong>Ingeniera de Software</strong> con experiencia en el desarrollo de aplicaciones 
+                        web para el sector público y privado. Mi enfoque es crear soluciones digitales que 
+                        realmente impacten y mejoren procesos.
+                    </p>
+                    <p>
+                        He trabajado directamente con instituciones gubernamentales, asegurando la estabilidad, 
+                        seguridad y eficiencia de plataformas críticas. Me especializo en desarrollo frontend 
+                        y backend, administración de bases de datos y gestión de servidores.
+                    </p>
+                    <p>
+                        Mi estilo de desarrollo es limpio, eficiente y siempre orientado al usuario final, 
+                        con un enfoque estructurado y compromiso constante con la calidad.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎓</div>
+                            <div>
+                                <strong>Educación</strong>
+                                <p>Ingeniera de Sistemas - UMSS</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💼</div>
+                            <div>
+                                <strong>Cargo Actual</strong>
+                                <p>Programadora - GAMQ</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌍</div>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <p>Cochabamba, Bolivia</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🗣️</div>
+                            <div>
+                                <strong>Idiomas</strong>
+                                <p>Español, Inglés (C1), Quechua (Básico)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Trayectoria</span>
+                <h2 class="section-title">Experiencia Profesional</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Feb 2025 - Presente</span>
+                        <h3>Técnico A / Programador 2</h3>
+                        <h4>GAMQ - Gobierno Autónomo Municipal de Quillacollo</h4>
+                        <p>
+                            Desarrollo y mantenimiento de sistemas informáticos institucionales, optimizando 
+                            procesos administrativos mediante plataformas web. Administración de servidores 
+                            y bases de datos, asegurando disponibilidad y seguridad.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Java Spring Boot</span>
+                            <span>Angular</span>
+                            <span>PostgreSQL</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mar 2024 - Dic 2024</span>
+                        <h3>Consultora Individual / Programador 2</h3>
+                        <h4>GAMQ</h4>
+                        <p>
+                            Implementación de mejoras funcionales y correctivas en sistemas críticos. 
+                            Elaboración de documentación técnica y capacitación a usuarios.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jul 2022 - Mar 2023</span>
+                        <h3>Desarrollador de Software</h3>
+                        <h4>OTB AASABA</h4>
+                        <p>
+                            Diseño, desarrollo e implementación de sistema administrativo para control 
+                            de pagos de agua. Gestión y mantenimiento de base de datos.
+                        </p>
+                        <div class="tech-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mar 2021 - Oct 2021</span>
+                        <h3>Asistente de Soporte Técnico</h3>
+                        <h4>Banco Unión</h4>
+                        <p>
+                            Soporte técnico a usuarios internos. Apoyo en infraestructura tecnológica 
+                            y resolución de incidencias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-tag">Featured</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>PROVEGAQ</h3>
+                        <p>Sistema de Verificación de Gases Vehiculares para la Red Mónica del GAMQ. Control integral de emisiones vehiculares.</p>
+                        <div class="tech-tags">
+                            <span>Spring Boot</span>
+                            <span>Angular</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <span class="project-year">2025</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>PAGO ÚNICO</h3>
+                        <p>Sistema de gestión de cobros para mercados municipales con integración RUAT. Optimización de recaudación y procesamiento.</p>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>API RUAT</span>
+                        </div>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>PARQUI</h3>
+                        <p>Sistema de estacionamiento vehicular. Generación de boletas y notificaciones para gestión municipal.</p>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>Spring Boot</span>
+                        </div>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MATADERO</h3>
+                        <p>Sistema integral para gestión de órdenes del matadero municipal. Integración RUAT y seguimiento de solicitudes.</p>
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>DEPORTES</h3>
+                        <p>Sistema de reservas y gestión de canchas deportivas con pagos en línea integrados con RUAT.</p>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>Spring Boot</span>
+                        </div>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ODECO</h3>
+                        <p>Sistema de manejo y administración de reclamos ciudadanos con seguimiento detallado y resolución eficiente.</p>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tecnologías</span>
+                <h2 class="section-title">Habilidades Técnicas</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Java Spring Boot</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Bases de Datos</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="soft-skills">
+                <h3>Habilidades Blandas</h3>
+                <div class="soft-skills-grid">
+                    <div class="soft-skill">
+                        <div class="soft-skill-icon">🤝</div>
+                        <span>Trabajo en Equipo</span>
+                    </div>
+                    <div class="soft-skill">
+                        <div class="soft-skill-icon">💬</div>
+                        <span>Comunicación Efectiva</span>
+                    </div>
+                    <div class="soft-skill">
+                        <div class="soft-skill-icon">🧩</div>
+                        <span>Resolución de Problemas</span>
+                    </div>
+                    <div class="soft-skill">
+                        <div class="soft-skill-icon">⚡</div>
+                        <span>Adaptabilidad</span>
+                    </div>
+                    <div class="soft-skill">
+                        <div class="soft-skill-icon">🎯</div>
+                        <span>Gestión del Tiempo</span>
+                    </div>
+                    <div class="soft-skill">
+                        <div class="soft-skill-icon">🔍</div>
+                        <span>Pensamiento Crítico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hablemos</span>
+                <h2 class="section-title">Contacto</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        ¿Tienes un proyecto en mente o quieres colaborar? 
+                        Me encantaría escuchar de ti.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://linkedin.com/in/fabiola-morales-dev" target="_blank" class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <p>fabiola-morales-dev</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/fabiola-morales" target="_blank" class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>GitHub</strong>
+                                <p>github.com/fabiola-morales</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Fabiola Morales. Hecho con ❤️ en Cochabamba, Bolivia.</p>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/fabiola-morales-dev" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/fabiola-morales" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
