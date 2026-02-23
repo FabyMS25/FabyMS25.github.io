@@ -6,7 +6,7 @@
   <title>Fabiola Morales · Full Stack Developer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:opsz,ital,wght@9..144,0..1,300..900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -53,16 +53,16 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <canvas id="gridCanvas"></canvas>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
     <div class="hero-inner">
       <div class="hero-left">
         <p class="hero-tag" data-i18n="hero.tag">Systems Engineer · Full Stack Developer</p>
         <h1 class="hero-name">
           <span>Fabiola</span>
-          <span class="accent-line">Morales<span class="dot">.</span></span>
+          <span class="name-line2">Morales<span class="dot">.</span></span>
         </h1>
-        <p class="hero-desc" data-i18n="hero.desc">
-          Architect of digital solutions for public management.<br/>Angular · Spring Boot · PostgreSQL · Docker.
-        </p>
+        <p class="hero-desc" data-i18n="hero.desc">Architect of digital solutions for public management.<br/>Angular · Spring Boot · PostgreSQL · Docker.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn-primary" data-i18n="hero.cta1">View Projects</a>
           <a href="mailto:moralessfaby1@gmail.com" class="btn-ghost" data-i18n="hero.cta2">Get in Touch</a>
@@ -103,8 +103,8 @@
           <p data-i18n="about.p2">I'm driven to build systems that simplify people's lives — with robust code, intuitive interfaces, and scalable architectures. I've led projects from scratch and optimized existing systems under real operational pressure.</p>
           <div class="about-stats">
             <div class="stat">
-              <span class="stat-num" data-target="10">0</span><span class="accent">+</span>
-              <p data-i18n="about.stat1">Systems in production</p>
+              <span class="stat-num" data-target="14">0</span><span class="accent">+</span>
+              <p data-i18n="about.stat1">Systems built</p>
             </div>
             <div class="stat">
               <span class="stat-num" data-target="3">0</span><span class="accent">+</span>
@@ -118,13 +118,14 @@
         </div>
         <div class="about-card">
           <div class="card-glow"></div>
+          <div class="card-avatar">FM</div>
           <div class="card-name">Fabiola Danny<br/>Morales Siles</div>
           <div class="card-role" data-i18n="card.role">Systems Engineer · Full Stack</div>
           <div class="card-details">
-            <div><span>📍</span> Quillacollo, Cochabamba, Bolivia</div>
-            <div><span>📞</span> (+591) 72248669</div>
-            <div><span>🎓</span> UMSS · <span data-i18n="card.grad">July 2022</span></div>
-            <div><span>🌐</span> <span data-i18n="card.langs">Spanish · English C1 · Quechua Basic</span></div>
+            <div><span>📍</span><span> Quillacollo, Cochabamba, Bolivia</span></div>
+            <div><span>📞</span><span> (+591) 72248669</span></div>
+            <div><span>🎓</span><span> UMSS · <span data-i18n="card.grad">July 2022</span></span></div>
+            <div><span>🌐</span><span data-i18n="card.langs"> Spanish · English C1 · Quechua Basic</span></div>
           </div>
           <div class="card-links">
             <a href="https://github.com/FabyMS25" target="_blank">GitHub ↗</a>
@@ -136,7 +137,7 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE (compact) -->
+  <!-- EXPERIENCE -->
   <section class="experience section" id="experience">
     <div class="container">
       <div class="section-label" data-i18n="exp.label">02 · experience</div>
@@ -145,7 +146,6 @@
         <em data-i18n="exp.title2">journey.</em>
       </h2>
       <div class="exp-compact">
-
         <div class="exp-row">
           <div class="exp-left">
             <div class="exp-period">2023 – 2025</div>
@@ -156,13 +156,12 @@
               <h3 data-i18n="exp.job1.title">Consultant · Programmer / Analyst</h3>
               <span class="exp-badge" data-i18n="exp.job1.type">Full-time</span>
             </div>
-            <p data-i18n="exp.job1.desc">Led full-stack development of 10+ institutional systems for Quillacollo's Municipal Government. Built and deployed PROVEGAQ, GAMSIS (SSO), ODECO, DEPORTES, PAGO ÚNICO, MATADERO and more. Managed servers, databases and Docker deployments in production environments.</p>
+            <p data-i18n="exp.job1.desc">Led full-stack development of 14+ institutional systems for Quillacollo's Municipal Government. Built PROVEGAQ, GAMSIS (SSO), ODECO, DEPORTES, PAGO ÚNICO, MATADERO and more. Managed servers, databases and Docker deployments in production.</p>
             <div class="tech-chips">
               <span>Spring Boot</span><span>Angular</span><span>PostgreSQL</span><span>Docker</span><span>REST APIs</span><span>Git</span>
             </div>
           </div>
         </div>
-
         <div class="exp-row">
           <div class="exp-left">
             <div class="exp-period">2022 – 2023</div>
@@ -173,13 +172,10 @@
               <h3 data-i18n="exp.job2.title">Software Developer</h3>
               <span class="exp-badge" data-i18n="exp.job2.type">Freelance</span>
             </div>
-            <p data-i18n="exp.job2.desc">Designed and built a custom administrative system for community water payment control. Digitized manual records, implemented attendance tracking and automated notifications for residents.</p>
-            <div class="tech-chips">
-              <span>Laravel</span><span>MySQL</span><span>PHP</span>
-            </div>
+            <p data-i18n="exp.job2.desc">Designed and built a custom administrative system for community water payment control. Digitized manual records, attendance tracking and automated resident notifications.</p>
+            <div class="tech-chips"><span>Laravel</span><span>MySQL</span><span>PHP</span></div>
           </div>
         </div>
-
         <div class="exp-row">
           <div class="exp-left">
             <div class="exp-period">2021</div>
@@ -190,13 +186,10 @@
               <h3 data-i18n="exp.job3.title">IT Support Assistant</h3>
               <span class="exp-badge" data-i18n="exp.job3.type">Internship</span>
             </div>
-            <p data-i18n="exp.job3.desc">Provided technical support in a high-demand banking environment. Managed infrastructure issues and resolved user incidents.</p>
-            <div class="tech-chips">
-              <span data-i18n="chip.support">IT Support</span><span data-i18n="chip.infra">Infrastructure</span>
-            </div>
+            <p data-i18n="exp.job3.desc">Technical support in a high-demand banking environment. Managed infrastructure issues and resolved user incidents.</p>
+            <div class="tech-chips"><span data-i18n="chip.support">IT Support</span><span data-i18n="chip.infra">Infrastructure</span></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -209,19 +202,20 @@
         <span data-i18n="proj.title1">Systems in</span><br/>
         <em data-i18n="proj.title2">production.</em>
       </h2>
+
+      <!-- MUNICIPAL SYSTEMS -->
+      <div class="proj-category-label" data-i18n="proj.cat1">Municipal Systems · GAMQ</div>
       <div class="projects-grid">
 
         <article class="project-card featured">
           <div class="project-top">
             <div class="project-num">01</div>
-            <a href="http://200.58.81.34:4210" target="_blank" class="link-arrow">↗</a>
+            <a href="http://200.58.81.34:4210" target="_blank" class="link-arrow" title="View live">↗</a>
           </div>
           <h3>PROVEGAQ</h3>
           <p class="project-sub" data-i18n="p1.sub">Vehicle Gas Verification · 2025</p>
-          <p class="project-desc" data-i18n="p1.desc">Comprehensive platform for controlling vehicle emissions at GAMQ's Red Mónica. Automatic PASS/FAIL decision engine, real-time RUAT integration, sanctions module, and public air quality data portal.</p>
-          <div class="tech-chips">
-            <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span>
-          </div>
+          <p class="project-desc" data-i18n="p1.desc">Comprehensive platform for vehicle emissions control at GAMQ's Red Mónica. Automatic PASS/FAIL decision engine, real-time RUAT integration, sanctions module, and air quality public data portal.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div>
           <div class="project-badge" data-i18n="p1.badge">Full-stack lead</div>
         </article>
 
@@ -232,10 +226,8 @@
           </div>
           <h3>GAMSIS</h3>
           <p class="project-sub" data-i18n="p2.sub">Municipal SSO · 2023–Present</p>
-          <p class="project-desc" data-i18n="p2.desc">Single Sign-On platform centralizing access to 10+ municipal systems. Granular permission management per module and unified authentication across the entire GAMQ ecosystem.</p>
-          <div class="tech-chips">
-            <span>Angular</span><span>Spring Boot</span><span>SSO</span><span>OAuth</span>
-          </div>
+          <p class="project-desc" data-i18n="p2.desc">Single Sign-On platform centralizing access to 10+ municipal systems. Granular permission management per module and unified authentication across the GAMQ ecosystem.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>SSO</span><span>OAuth</span></div>
         </article>
 
         <article class="project-card">
@@ -243,51 +235,203 @@
             <div class="project-num">03</div>
             <a href="http://200.58.81.34:4200" target="_blank" class="link-arrow">↗</a>
           </div>
-          <h3>TASKBOARD + ODECO</h3>
-          <p class="project-sub" data-i18n="p3.sub">Citizen Complaint Management · 2023–2025</p>
-          <p class="project-desc" data-i18n="p3.desc">Integrated ecosystem via REST APIs: ODECO as the public citizen portal for complaints, and TaskBoard automatically assigning and tracking internal tasks for municipal staff.</p>
-          <div class="tech-chips">
-            <span>Angular</span><span>Spring Boot</span><span>REST API</span>
-          </div>
+          <h3>TASKBOARD</h3>
+          <p class="project-sub" data-i18n="p3.sub">Task & Complaint Management · 2024</p>
+          <p class="project-desc" data-i18n="p3.desc">Internal task management integrated with ODECO via REST APIs. Automatically assigns and tracks citizen complaints as internal tasks for municipal staff.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>REST API</span></div>
         </article>
 
         <article class="project-card">
           <div class="project-top">
             <div class="project-num">04</div>
-            <a href="http://181.177.143.187:4205/" target="_blank" class="link-arrow">↗</a>
+            <a href="http://200.58.81.34:4210" target="_blank" class="link-arrow">↗</a>
           </div>
-          <h3>DEPORTES</h3>
-          <p class="project-sub" data-i18n="p4.sub">Sports Facilities · 2024–Present</p>
-          <p class="project-desc" data-i18n="p4.desc">Online booking and payment system for municipal sports courts. Schedule and availability management with RUAT integration for user validation.</p>
-          <div class="tech-chips">
-            <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span>
-          </div>
+          <h3>ODECO</h3>
+          <p class="project-sub" data-i18n="p4.sub">Citizen Complaint Portal · 2023–Present</p>
+          <p class="project-desc" data-i18n="p4.desc">Public-facing portal for receiving and managing citizen complaints, suggestions and queries. Citizens can track the status of their requests in real time.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span></div>
         </article>
 
         <article class="project-card">
           <div class="project-top">
             <div class="project-num">05</div>
-            <a href="https://quillacollo.gob.bo/" target="_blank" class="link-arrow">↗</a>
+            <a href="http://181.177.143.187:4205/" target="_blank" class="link-arrow">↗</a>
           </div>
-          <h3>Portal Quillacollo</h3>
-          <p class="project-sub" data-i18n="p5.sub">Municipal Website · 2023</p>
-          <p class="project-desc" data-i18n="p5.desc">Official municipal portal with dynamic subpages per unit, news manager, and unified access to all digital services. Containerized with Docker for Linux/Windows servers.</p>
-          <div class="tech-chips">
-            <span>PHP</span><span>JavaScript</span><span>HTML/CSS</span><span>Docker</span>
-          </div>
+          <h3>DEPORTES</h3>
+          <p class="project-sub" data-i18n="p5.sub">Sports Facilities · 2024–Present</p>
+          <p class="project-desc" data-i18n="p5.desc">Online booking and payment system for municipal sports courts. Schedule and availability management with RUAT integration for user validation.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span></div>
         </article>
 
         <article class="project-card">
           <div class="project-top">
             <div class="project-num">06</div>
+            <a href="http://200.58.81.34:4201" target="_blank" class="link-arrow">↗</a>
+          </div>
+          <h3>PRESQUI</h3>
+          <p class="project-sub" data-i18n="p6.sub">Budget Management · 2024–Present</p>
+          <p class="project-desc" data-i18n="p6.desc">Platform for administering construction project budgets. Modules for creation, modification and consultation of budgets, optimizing workflows for the projects area.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">07</div>
+            <span class="link-arrow link-soon" title="Link coming soon">⊙</span>
+          </div>
+          <h3>PAGO ÚNICO</h3>
+          <p class="project-sub" data-i18n="p7.sub">Municipal Market Billing · 2024</p>
+          <p class="project-desc" data-i18n="p7.desc">Modernized payment collection system for municipal markets. Efficient RUAT integration for automatic rate liquidation, UX/UI redesign reducing transaction response times.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">08</div>
+            <span class="link-arrow link-soon" title="Link coming soon">⊙</span>
+          </div>
+          <h3>PARQUI</h3>
+          <p class="project-sub" data-i18n="p8.sub">Vehicle Parking · 2024–Present</p>
+          <p class="project-desc" data-i18n="p8.desc">Digital administration of municipal parking. Modules for digital parking ticket generation, automatic notifications, and dual interface for control staff and vehicle owners.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">09</div>
+            <a href="http://200.58.81.34:4206" target="_blank" class="link-arrow">↗</a>
+          </div>
+          <h3>MATADERO</h3>
+          <p class="project-sub" data-i18n="p9.sub">Slaughterhouse Management · 2024</p>
+          <p class="project-desc" data-i18n="p9.desc">Full management of slaughterhouse orders and livestock requests. RUAT integration for automatic rate generation, detailed order tracking for sanitary control and traceability.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">10</div>
             <a href="http://200.58.81.34:4203" target="_blank" class="link-arrow">↗</a>
           </div>
-          <h3>SIGECEM + MATADERO</h3>
-          <p class="project-sub" data-i18n="p6.sub">Municipal Services · 2023–2024</p>
-          <p class="project-desc" data-i18n="p6.desc">SIGECEM digitizes cemetery administration. MATADERO manages slaughterhouse orders with full traceability, RUAT integration, and sanitary control.</p>
-          <div class="tech-chips">
-            <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span>
+          <h3>SIGECEM</h3>
+          <p class="project-sub" data-i18n="p10.sub">Cemetery Management · 2023</p>
+          <p class="project-desc" data-i18n="p10.desc">Digitization of municipal cemetery services. Modules for deceased registration, funeral service tracking, and administrative control ensuring data integrity.</p>
+          <div class="tech-chips"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">11</div>
+            <a href="https://quillacollo.gob.bo/" target="_blank" class="link-arrow">↗</a>
           </div>
+          <h3>Portal Quillacollo</h3>
+          <p class="project-sub" data-i18n="p11.sub">Municipal Website · 2023</p>
+          <p class="project-desc" data-i18n="p11.desc">Official municipal portal with dynamic subpages per unit, news manager, and unified access to all digital services. Containerized with Docker for Linux/Windows servers.</p>
+          <div class="tech-chips"><span>PHP</span><span>JavaScript</span><span>HTML/CSS</span><span>Docker</span></div>
+        </article>
+
+      </div>
+
+      <!-- COMMUNITY & ACADEMIC -->
+      <div class="proj-category-label" style="margin-top: 4rem;" data-i18n="proj.cat2">Community & Academic Projects</div>
+      <div class="projects-grid projects-grid-2">
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">12</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>OTB System</h3>
+          <p class="project-sub" data-i18n="p12.sub">Water Payments & Neighbors · 2022</p>
+          <p class="project-desc" data-i18n="p12.desc">Custom system for OTB AASABA automating water payment control, meeting attendance and automated neighbor notifications. Eliminated paper records entirely.</p>
+          <div class="tech-chips"><span>Laravel</span><span>MySQL</span><span>PHP</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">13</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>SAHI Quality Tool</h3>
+          <p class="project-sub" data-i18n="p13.sub">Software Quality Audit · Academic</p>
+          <p class="project-desc" data-i18n="p13.desc">Implementation and evaluation of the SAHI tool for software quality measurement. Applied metrics and audits to ensure compliance with quality standards.</p>
+          <div class="tech-chips"><span>Quality Metrics</span><span>Audit</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">14</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>Clothing Commerce System</h3>
+          <p class="project-sub" data-i18n="p14.sub">Inventory & Sales · Academic</p>
+          <p class="project-desc" data-i18n="p14.desc">Information system for clothing commercialization with inventory management, sales tracking and customer management, optimizing the sale and distribution process.</p>
+          <div class="tech-chips"><span>Java</span><span>MySQL</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">15</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>Map API Search</h3>
+          <p class="project-sub" data-i18n="p15.sub">AI · Map Search · Academic</p>
+          <p class="project-desc" data-i18n="p15.desc">API search implementation on a map using artificial intelligence techniques to improve efficiency in locating and navigating points of interest.</p>
+          <div class="tech-chips"><span>JavaScript</span><span>AI</span><span>Maps API</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">16</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>STRIPS Planning – PROLOG</h3>
+          <p class="project-sub" data-i18n="p16.sub">Artificial Intelligence · Academic</p>
+          <p class="project-desc" data-i18n="p16.desc">STRIPS-based planning implementation using PROLOG, applying AI concepts to solve automatic planning problems through logical inference.</p>
+          <div class="tech-chips"><span>PROLOG</span><span>AI Planning</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">17</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>Parking Expert System</h3>
+          <p class="project-sub" data-i18n="p17.sub">Expert Systems · JESS · Academic</p>
+          <p class="project-desc" data-i18n="p17.desc">Expert system for vehicle parking planning and management using JESS, improving efficiency in space assignment and utilization through rule-based reasoning.</p>
+          <div class="tech-chips"><span>JESS</span><span>Expert Systems</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">18</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>Car Wash Tariff System</h3>
+          <p class="project-sub" data-i18n="p18.sub">Fuzzy Logic · XFUZZY · Academic</p>
+          <p class="project-desc" data-i18n="p18.desc">Expert system using XFUZZY to calculate car wash rates, applying fuzzy logic to provide accurate and fair pricing based on multiple factors.</p>
+          <div class="tech-chips"><span>XFUZZY</span><span>Fuzzy Logic</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">19</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>TIS Company Support System</h3>
+          <p class="project-sub" data-i18n="p19.sub">Software Engineering Workshop · Academic</p>
+          <p class="project-desc" data-i18n="p19.desc">Support system for a company developed within the Software Engineering Workshop, improving internal processes and project management through structured design.</p>
+          <div class="tech-chips"><span>Java</span><span>MySQL</span><span>UML</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">20</div>
+            <span class="link-arrow link-soon">⊙</span>
+          </div>
+          <h3>Hospital VIEDMA Simulation</h3>
+          <p class="project-sub" data-i18n="p20.sub">Systems Simulation · Academic</p>
+          <p class="project-desc" data-i18n="p20.desc">Simulation system for medical care management at Hospital VIEDMA, optimizing patient flows and hospital resources through simulation models.</p>
+          <div class="tech-chips"><span>Simulation</span><span>Modeling</span></div>
         </article>
 
       </div>
@@ -360,24 +504,16 @@
           <p class="contact-sub" data-i18n="contact.sub">Available for freelance projects, consulting, and full-stack development opportunities.</p>
           <div class="contact-links">
             <a href="mailto:moralessfaby1@gmail.com" class="contact-item">
-              <span class="ci-label">✉</span>
-              <span>moralessfaby1@gmail.com</span>
-              <span class="link-arrow">↗</span>
+              <span class="ci-label">✉</span><span>moralessfaby1@gmail.com</span><span class="link-arrow">↗</span>
             </a>
             <a href="https://linkedin.com/in/fabiola-morales-dev" target="_blank" class="contact-item">
-              <span class="ci-label">in</span>
-              <span>fabiola-morales-dev</span>
-              <span class="link-arrow">↗</span>
+              <span class="ci-label">in</span><span>fabiola-morales-dev</span><span class="link-arrow">↗</span>
             </a>
             <a href="https://github.com/FabyMS25" target="_blank" class="contact-item">
-              <span class="ci-label">gh</span>
-              <span>FabyMS25</span>
-              <span class="link-arrow">↗</span>
+              <span class="ci-label">gh</span><span>FabyMS25</span><span class="link-arrow">↗</span>
             </a>
             <a href="tel:+59172248669" class="contact-item">
-              <span class="ci-label">☎</span>
-              <span>(+591) 72248669</span>
-              <span class="link-arrow">↗</span>
+              <span class="ci-label">☎</span><span>(+591) 72248669</span><span class="link-arrow">↗</span>
             </a>
           </div>
         </div>
@@ -395,6 +531,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
