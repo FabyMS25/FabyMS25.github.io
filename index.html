@@ -3,191 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fabiola Morales — Full Stack Developer</title>
+  <title>Fabiola Morales · Full Stack Developer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- CURSOR -->
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursor-trail"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <div class="nav-logo">
-      <span class="nav-prompt">~/faby</span><span class="blink">_</span>
-    </div>
+    <div class="nav-logo">FM<span class="accent">.</span></div>
     <ul class="nav-links">
       <li><a href="#about">about</a></li>
-      <li><a href="#skills">skills</a></li>
       <li><a href="#experience">exp</a></li>
       <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
+    <button class="menu-toggle" id="menuToggle">
+      <span></span><span></span>
+    </button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">about</a></li>
+      <li><a href="#experience" class="mobile-link">experience</a></li>
+      <li><a href="#projects" class="mobile-link">projects</a></li>
+      <li><a href="#skills" class="mobile-link">skills</a></li>
+      <li><a href="#contact" class="mobile-link">contact</a></li>
+    </ul>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <div class="hero-tag reveal">
-        <span class="dot"></span> Available for new opportunities
+    <canvas id="gridCanvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-tag">Ingeniera de Sistemas · Full Stack Developer</p>
+        <h1 class="hero-name">
+          <span>Fabiola</span>
+          <span class="accent-line">Morales<span class="dot">.</span></span>
+        </h1>
+        <p class="hero-desc">
+          Arquitecto de soluciones digitales para la gestión pública.<br/>
+          Angular · Spring Boot · PostgreSQL · Docker.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">Ver proyectos</a>
+          <a href="mailto:moralessfaby1@gmail.com" class="btn-ghost">Contactar</a>
+        </div>
       </div>
-      <h1 class="hero-name reveal">
-        <span class="line-1">FABIOLA</span>
-        <span class="line-2">MORALES</span>
-      </h1>
-      <div class="hero-role reveal">
-        <span class="role-prefix">// </span>
-        <span class="typed" id="typed"></span>
-      </div>
-      <p class="hero-desc reveal">
-        Ingeniera de Sistemas · Full Stack Developer<br/>
-        Construyendo plataformas que impactan a miles de ciudadanos desde Quillacollo, Bolivia.
-      </p>
-      <div class="hero-cta reveal">
-        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-        <a href="#contact" class="btn btn-ghost">Contactar</a>
-      </div>
-      <div class="hero-links reveal">
-        <a href="https://github.com/FabyMS25" target="_blank" class="icon-link" title="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/fabiola-morales-dev" target="_blank" class="icon-link" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://fabym.github.io" target="_blank" class="icon-link" title="Portfolio">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        </a>
+      <div class="hero-right">
+        <div class="status-pill">
+          <span class="status-dot"></span>Disponible para proyectos
+        </div>
+        <div class="hero-stack">
+          <div class="stack-item" style="--d:0s">Angular</div>
+          <div class="stack-item" style="--d:.1s">Spring Boot</div>
+          <div class="stack-item" style="--d:.2s">PostgreSQL</div>
+          <div class="stack-item" style="--d:.3s">Docker</div>
+          <div class="stack-item" style="--d:.4s">TypeScript</div>
+          <div class="stack-item" style="--d:.5s">Java</div>
+        </div>
       </div>
     </div>
-    <div class="hero-code-block reveal">
-      <div class="code-window">
-        <div class="code-bar">
-          <span class="code-dot red"></span>
-          <span class="code-dot yellow"></span>
-          <span class="code-dot green"></span>
-          <span class="code-filename">fabiola.json</span>
-        </div>
-        <pre class="code-body"><code><span class="c-brace">{</span>
-  <span class="c-key">"name"</span><span class="c-colon">:</span> <span class="c-str">"Fabiola Morales"</span>,
-  <span class="c-key">"role"</span><span class="c-colon">:</span> <span class="c-str">"Full Stack Engineer"</span>,
-  <span class="c-key">"location"</span><span class="c-colon">:</span> <span class="c-str">"Quillacollo, Bolivia 🇧🇴"</span>,
-  <span class="c-key">"stack"</span><span class="c-colon">:</span> <span class="c-brace">[</span>
-    <span class="c-str">"Angular"</span>, <span class="c-str">"Spring Boot"</span>,
-    <span class="c-str">"PostgreSQL"</span>, <span class="c-str">"Docker"</span>
-  <span class="c-brace">]</span>,
-  <span class="c-key">"languages"</span><span class="c-colon">:</span> <span class="c-brace">[</span>
-    <span class="c-str">"Español 🇧🇴"</span>,
-    <span class="c-str">"English C1 🇺🇸"</span>,
-    <span class="c-str">"Quechua (básico)"</span>
-  <span class="c-brace">]</span>,
-  <span class="c-key">"status"</span><span class="c-colon">:</span> <span class="c-green">"open_to_work"</span>
-<span class="c-brace">}</span></code></pre>
-      </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">01</span>
-        <h2 class="section-title">About</h2>
-      </div>
+      <div class="section-label">01 · about</div>
       <div class="about-grid">
-        <div class="about-text reveal">
-          <p>
-            Soy Ingeniera de Sistemas con formación en la <strong>Universidad Mayor de San Simón (UMSS)</strong> y más de 3 años de experiencia desarrollando sistemas críticos para la administración pública boliviana.
-          </p>
-          <p>
-            Mi trabajo en el <strong>GAMQ</strong> me ha permitido liderar proyectos de alto impacto: desde plataformas de verificación vehicular y recaudación municipal, hasta sistemas SSO que unifican el acceso a más de 10 aplicaciones institucionales.
-          </p>
-          <p>
-            Me apasiona escribir código limpio, diseñar interfaces intuitivas y resolver problemas complejos con soluciones elegantes. También tengo experiencia en docencia —inglés y computación— lo que refuerza mi capacidad para comunicar ideas técnicas de forma clara.
-          </p>
-        </div>
-        <div class="about-stats reveal">
-          <div class="stat-card">
-            <span class="stat-num">3+</span>
-            <span class="stat-label">años de experiencia</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">sistemas en producción</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">1M+</span>
-            <span class="stat-label">ciudadanos impactados</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">C1</span>
-            <span class="stat-label">nivel de inglés</span>
+        <div class="about-text">
+          <h2 class="section-title">Código limpio,<br/><em>impacto real.</em></h2>
+          <p>Soy Ingeniera de Sistemas graduada de la UMSS con más de 3 años desarrollando plataformas críticas para el Gobierno Autónomo Municipal de Quillacollo. Mi trabajo abarca el ciclo completo: análisis de requerimientos, diseño, implementación y despliegue en producción.</p>
+          <p>Me mueve construir sistemas que simplifican la vida de las personas — con código robusto, interfaces intuitivas y arquitecturas que escalan. He liderado proyectos desde cero y optimizado sistemas existentes bajo presión operativa real.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="10">0</span><span class="accent">+</span>
+              <p>Sistemas en producción</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span><span class="accent">+</span>
+              <p>Años en sector público</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="5">0</span><span class="accent">k+</span>
+              <p>Usuarios impactados</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-num">02</span>
-        <h2 class="section-title">Tech Stack</h2>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill-group">
-          <h3 class="skill-group-title">// Frontend</h3>
-          <div class="skill-tags">
-            <span class="tag">Angular</span>
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML / CSS</span>
-            <span class="tag">Laravel</span>
+        <div class="about-card">
+          <div class="card-glow"></div>
+          <div class="card-name">Fabiola Danny<br/>Morales Siles</div>
+          <div class="card-role">Ing. de Sistemas · Full Stack</div>
+          <div class="card-details">
+            <div><span>📍</span> Quillacollo, Cochabamba, Bolivia</div>
+            <div><span>📞</span> (+591) 72248669</div>
+            <div><span>🎓</span> UMSS · Julio 2022</div>
+            <div><span>🌐</span> Español · English C1 · Quechua Básico</div>
           </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">// Backend</h3>
-          <div class="skill-tags">
-            <span class="tag">Spring Boot</span>
-            <span class="tag">Java</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">PHP</span>
-            <span class="tag">Python</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">// Databases</h3>
-          <div class="skill-tags">
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Firebase</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">// DevOps & Tools</h3>
-          <div class="skill-tags">
-            <span class="tag">Docker</span>
-            <span class="tag">Git / GitHub</span>
-            <span class="tag">GitLab</span>
-            <span class="tag">Linux</span>
-            <span class="tag">AWS</span>
-            <span class="tag">IntelliJ</span>
-            <span class="tag">VS Code</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">// Methodologies</h3>
-          <div class="skill-tags">
-            <span class="tag">Scrum</span>
-            <span class="tag">Kanban</span>
-            <span class="tag">JUnit</span>
-            <span class="tag">Jest</span>
-            <span class="tag">REST APIs</span>
+          <div class="card-links">
+            <a href="https://github.com/FabyMS25" target="_blank">GitHub ↗</a>
+            <a href="https://linkedin.com/in/fabiola-morales-dev" target="_blank">LinkedIn ↗</a>
+            <a href="mailto:moralessfaby1@gmail.com">Email ↗</a>
           </div>
         </div>
       </div>
@@ -197,82 +124,77 @@
   <!-- EXPERIENCE -->
   <section class="experience section" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">03</span>
-        <h2 class="section-title">Experience</h2>
-      </div>
-      <div class="timeline reveal">
+      <div class="section-label">02 · experience</div>
+      <h2 class="section-title">Trayectoria<br/><em>profesional.</em></h2>
+      <div class="timeline">
 
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
+          <div class="timeline-meta">
+            <div class="timeline-date">Feb 2025 – Dic 2025</div>
+            <div class="timeline-company">GAMQ · Quillacollo</div>
+          </div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-period">Feb 2025 – Dic 2025</span>
-              <span class="timeline-badge">Actual</span>
-            </div>
-            <h3 class="timeline-role">Técnico A / Programador 2</h3>
-            <p class="timeline-company">GAMQ — Gobierno Autónomo Municipal de Quillacollo</p>
-            <p class="timeline-desc">Desarrollo y mantenimiento de sistemas institucionales críticos. Liderazgo en nuevos proyectos como PROVEGAQ (verificación vehicular) y DEPORTES. Administración de servidores, bases de datos y despliegue con Docker.</p>
-            <div class="timeline-tech">
-              <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span><span class="tag sm">Docker</span>
+            <h3>Consultora · Técnico A / Programador 2</h3>
+            <p>Desarrollo y mantenimiento de sistemas institucionales. Lideré PROVEGAQ (verificación vehicular), integrando motor de decisión automática y conexión en tiempo real con el RUAT. Administración de servidores y bases de datos en producción.</p>
+            <div class="tech-chips">
+              <span>Spring Boot</span><span>Angular</span><span>PostgreSQL</span><span>Docker</span><span>Git</span>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
+          <div class="timeline-meta">
+            <div class="timeline-date">Mar 2024 – Dic 2024</div>
+            <div class="timeline-company">GAMQ · Quillacollo</div>
+          </div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-period">Mar 2024 – Dic 2024</span>
-            </div>
-            <h3 class="timeline-role">Técnico A / Programador 2</h3>
-            <p class="timeline-company">GAMQ — Gobierno Autónomo Municipal de Quillacollo</p>
-            <p class="timeline-desc">Desarrollo del sistema MATADERO, optimización de PAGO ÚNICO y mantenimiento de múltiples plataformas municipales. Integración con servicios del RUAT y despliegue en producción.</p>
-            <div class="timeline-tech">
-              <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span><span class="tag sm">Docker</span>
+            <h3>Consultora · Técnico A / Programador 2</h3>
+            <p>Desarrollo de PAGO ÚNICO, PRESQUI, PARQUI, MATADERO y DEPORTES. Integración REST con RUAT, despliegues Dockerizados en Linux/Windows. Rediseño UX/UI mejorando tiempos de respuesta operativa.</p>
+            <div class="tech-chips">
+              <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>REST APIs</span>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
+          <div class="timeline-meta">
+            <div class="timeline-date">May 2023 – Dic 2023</div>
+            <div class="timeline-company">GAMQ · Quillacollo</div>
+          </div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-period">May 2023 – Dic 2023</span>
-            </div>
-            <h3 class="timeline-role">Analista Programador 2</h3>
-            <p class="timeline-company">GAMQ — Gobierno Autónomo Municipal de Quillacollo</p>
-            <p class="timeline-desc">Desarrollo de ODECO, SIGECEM y GAMSIS (SSO). Página web oficial del municipio. Capacitación de usuarios y documentación técnica.</p>
-            <div class="timeline-tech">
-              <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PHP</span><span class="tag sm">Docker</span>
+            <h3>Analista Programador 2</h3>
+            <p>Lideré el desarrollo desde cero de ODECO (atención ciudadana), SIGECEM (cementerios) y GAMSIS (SSO). Unificación de autenticación para +10 sistemas municipales con permisos granulares por módulo.</p>
+            <div class="tech-chips">
+              <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>SSO</span>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
+          <div class="timeline-meta">
+            <div class="timeline-date">Jul 2022 – Mar 2023</div>
+            <div class="timeline-company">OTB AASABA · Cbba</div>
+          </div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-period">Jul 2022 – Mar 2023</span>
-            </div>
-            <h3 class="timeline-role">Desarrolladora de Software</h3>
-            <p class="timeline-company">OTB AASABA — Cochabamba</p>
-            <p class="timeline-desc">Diseño, desarrollo e implementación de sistema administrativo para control de pagos de agua. Gestión de base de datos y soporte técnico.</p>
-            <div class="timeline-tech">
-              <span class="tag sm">Laravel</span><span class="tag sm">MySQL</span>
+            <h3>Desarrollador de Software</h3>
+            <p>Sistema administrativo a medida para control de pagos de agua potable. Digitalización completa de registros manuales, gestión de asistencia a reuniones y notificaciones a vecinos.</p>
+            <div class="tech-chips">
+              <span>Laravel</span><span>MySQL</span><span>PHP</span>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-marker"></div>
+          <div class="timeline-meta">
+            <div class="timeline-date">Mar 2021 – Oct 2021</div>
+            <div class="timeline-company">Banco Unión · Cbba</div>
+          </div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-period">Mar 2021 – Oct 2021</span>
+            <h3>Asistente de Soporte Técnico</h3>
+            <p>Soporte a usuarios internos, gestión de infraestructura tecnológica y resolución de incidencias en entorno bancario de alta demanda.</p>
+            <div class="tech-chips">
+              <span>Soporte TI</span><span>Infraestructura</span>
             </div>
-            <h3 class="timeline-role">Asistente de Soporte Técnico</h3>
-            <p class="timeline-company">Banco Unión — Cochabamba</p>
-            <p class="timeline-desc">Soporte técnico a usuarios internos, infraestructura tecnológica y resolución de incidencias.</p>
           </div>
         </div>
 
@@ -283,111 +205,139 @@
   <!-- PROJECTS -->
   <section class="projects section" id="projects">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">04</span>
-        <h2 class="section-title">Projects</h2>
-      </div>
+      <div class="section-label">03 · projects</div>
+      <h2 class="section-title">Sistemas en<br/><em>producción.</em></h2>
       <div class="projects-grid">
 
-        <article class="project-card featured reveal" data-url="http://200.58.81.34:4210">
-          <div class="project-num">01</div>
-          <div class="project-meta">
-            <span class="project-year">2025</span>
-            <span class="project-badge">Featured</span>
+        <article class="project-card featured">
+          <div class="project-top">
+            <div class="project-num">01</div>
+            <a href="http://200.58.81.34:4210" target="_blank" class="link-arrow">↗</a>
           </div>
-          <h3 class="project-name">PROVEGAQ</h3>
-          <p class="project-sub">Sistema de Verificación de Gases Vehiculares</p>
-          <p class="project-desc">Plataforma integral para control de emisiones contaminantes del GAMQ. Motor de decisión automática APRUEBA/REPRUEBA, integración con RUAT en tiempo real y publicación de datos de calidad del aire.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span><span class="tag sm">Docker</span>
+          <h3>PROVEGAQ</h3>
+          <p class="project-sub">Verificación de Gases Vehiculares · 2025</p>
+          <p class="project-desc">Plataforma integral para el control de emisiones contaminantes en la Red Mónica del GAMQ. Motor automático APRUEBA/REPRUEBA, integración RUAT en tiempo real, módulo de sanciones y publicación de datos de calidad del aire.</p>
+          <div class="tech-chips">
+            <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span>
           </div>
-          <a href="http://200.58.81.34:4210" target="_blank" class="project-link">Ver sistema →</a>
+          <div class="project-badge">Full-stack lead</div>
         </article>
 
-        <article class="project-card reveal" data-url="http://181.177.143.187:4205/">
-          <div class="project-num">02</div>
-          <div class="project-meta"><span class="project-year">2024–</span></div>
-          <h3 class="project-name">DEPORTES</h3>
-          <p class="project-sub">Gestión de Instalaciones Deportivas</p>
-          <p class="project-desc">Sistema de reservas online, pagos y gestión de reclamos para instalaciones deportivas municipales. Liderazgo full-stack desde cero.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span>
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">02</div>
+            <a href="http://181.177.143.185:4200/home" target="_blank" class="link-arrow">↗</a>
           </div>
-          <a href="http://181.177.143.187:4205/" target="_blank" class="project-link">Ver sistema →</a>
+          <h3>GAMSIS</h3>
+          <p class="project-sub">SSO Municipal · 2023–Actualidad</p>
+          <p class="project-desc">Plataforma Single Sign-On que centraliza acceso a +10 sistemas. Gestión granular de permisos por módulo y autenticación unificada para todo el ecosistema GAMQ.</p>
+          <div class="tech-chips">
+            <span>Angular</span><span>Spring Boot</span><span>SSO</span><span>OAuth</span>
+          </div>
         </article>
 
-        <article class="project-card reveal" data-url="http://181.177.143.185:4200/home">
-          <div class="project-num">03</div>
-          <div class="project-meta"><span class="project-year">2023–</span></div>
-          <h3 class="project-name">GAMSIS</h3>
-          <p class="project-sub">Single Sign-On Municipal</p>
-          <p class="project-desc">Plataforma SSO que centraliza autenticación y autorización de más de 10 sistemas municipales. Gestión granular de permisos por módulo.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span>
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">03</div>
+            <a href="http://200.58.81.34:4200" target="_blank" class="link-arrow">↗</a>
           </div>
-          <a href="http://181.177.143.185:4200/home" target="_blank" class="project-link">Ver sistema →</a>
+          <h3>TASKBOARD + ODECO</h3>
+          <p class="project-sub">Gestión de Reclamos Ciudadanos · 2023–2025</p>
+          <p class="project-desc">Ecosistema integrado via REST APIs: ODECO como portal público de reclamos y TaskBoard asignando automáticamente tareas internas a funcionarios municipales.</p>
+          <div class="tech-chips">
+            <span>Angular</span><span>Spring Boot</span><span>REST API</span>
+          </div>
         </article>
 
-        <article class="project-card reveal" data-url="http://200.58.81.34:4200">
-          <div class="project-num">04</div>
-          <div class="project-meta"><span class="project-year">2024–</span></div>
-          <h3 class="project-name">TASKBOARD + ODECO</h3>
-          <p class="project-sub">Gestión de Reclamos Ciudadanos</p>
-          <p class="project-desc">Ecosistema integrado: ODECO recibe reclamos ciudadanos y TaskBoard los asigna automáticamente como tareas a funcionarios mediante APIs REST.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">REST API</span>
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">04</div>
+            <a href="http://181.177.143.187:4205/" target="_blank" class="link-arrow">↗</a>
           </div>
-          <a href="http://200.58.81.34:4200" target="_blank" class="project-link">Ver sistema →</a>
+          <h3>DEPORTES</h3>
+          <p class="project-sub">Instalaciones Deportivas · 2024–2025</p>
+          <p class="project-desc">Sistema de reservas y pagos en línea para canchas municipales. Gestión de horarios y disponibilidad con integración RUAT para validación de usuarios.</p>
+          <div class="tech-chips">
+            <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span>
+          </div>
         </article>
 
-        <article class="project-card reveal" data-url="http://200.58.81.34:4201">
-          <div class="project-num">05</div>
-          <div class="project-meta"><span class="project-year">2024–</span></div>
-          <h3 class="project-name">PRESQUI</h3>
-          <p class="project-sub">Gestión de Presupuestos</p>
-          <p class="project-desc">Sistema para administración de presupuestos en proyectos de construcción municipal. Mantenimiento evolutivo y optimización de flujos de trabajo.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span>
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">05</div>
+            <a href="https://quillacollo.gob.bo/" target="_blank" class="link-arrow">↗</a>
           </div>
-          <a href="http://200.58.81.34:4201" target="_blank" class="project-link">Ver sistema →</a>
+          <h3>Portal Quillacollo</h3>
+          <p class="project-sub">Página Web Municipal · 2023</p>
+          <p class="project-desc">Portal oficial con subpáginas dinámicas por unidad, gestor de noticias y acceso unificado a servicios digitales del municipio. Contenerizado con Docker.</p>
+          <div class="tech-chips">
+            <span>PHP</span><span>JavaScript</span><span>HTML/CSS</span><span>Docker</span>
+          </div>
         </article>
 
-        <article class="project-card reveal" data-url="https://quillacollo.gob.bo/">
-          <div class="project-num">06</div>
-          <div class="project-meta"><span class="project-year">2023</span></div>
-          <h3 class="project-name">Quillacollo.gob.bo</h3>
-          <p class="project-sub">Página Web Municipal Oficial</p>
-          <p class="project-desc">Portal informativo con subpáginas dinámicas por unidad, gestor de noticias e integración con sistemas administrativos. Desplegado con Docker en Linux/Windows.</p>
-          <div class="project-tech">
-            <span class="tag sm">PHP</span><span class="tag sm">JavaScript</span><span class="tag sm">HTML/CSS</span><span class="tag sm">Docker</span>
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-num">06</div>
+            <a href="http://200.58.81.34:4203" target="_blank" class="link-arrow">↗</a>
           </div>
-          <a href="https://quillacollo.gob.bo/" target="_blank" class="project-link">Ver sitio →</a>
+          <h3>SIGECEM + MATADERO</h3>
+          <p class="project-sub">Gestión de Servicios Municipales · 2023–2024</p>
+          <p class="project-desc">SIGECEM digitaliza administración de cementerios. MATADERO gestiona órdenes de faenado con trazabilidad, integración RUAT y control sanitario completo.</p>
+          <div class="tech-chips">
+            <span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span>
+          </div>
         </article>
 
-        <article class="project-card reveal" data-url="http://200.58.81.34:4203">
-          <div class="project-num">07</div>
-          <div class="project-meta"><span class="project-year">2023</span></div>
-          <h3 class="project-name">SIGECEM</h3>
-          <p class="project-sub">Gestión de Cementerios Municipales</p>
-          <p class="project-desc">Sistema integral para administración de cementerios, registro de difuntos, servicios funerarios y control administrativo. Centralización de información sensible.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">PostgreSQL</span>
-          </div>
-          <a href="http://200.58.81.34:4203" target="_blank" class="project-link">Ver sistema →</a>
-        </article>
+      </div>
+    </div>
+  </section>
 
-        <article class="project-card reveal" data-url="http://200.58.81.34:4206">
-          <div class="project-num">08</div>
-          <div class="project-meta"><span class="project-year">2024</span></div>
-          <h3 class="project-name">MATADERO</h3>
-          <p class="project-sub">Gestión de Órdenes y Solicitudes</p>
-          <p class="project-desc">Plataforma para el matadero municipal. Frontend desde cero, integración RUAT para tasas automáticas y seguimiento de órdenes de faenado.</p>
-          <div class="project-tech">
-            <span class="tag sm">Angular</span><span class="tag sm">Spring Boot</span><span class="tag sm">Docker</span>
-          </div>
-          <a href="http://200.58.81.34:4206" target="_blank" class="project-link">Ver sistema →</a>
-        </article>
-
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">04 · skills</div>
+      <h2 class="section-title">Stack<br/><em>técnico.</em></h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4><span class="accent">→</span> Frontend</h4>
+          <ul>
+            <li>Angular <span class="bar" data-w="92"></span></li>
+            <li>TypeScript <span class="bar" data-w="85"></span></li>
+            <li>React <span class="bar" data-w="70"></span></li>
+            <li>HTML / CSS <span class="bar" data-w="95"></span></li>
+            <li>Laravel (Blade) <span class="bar" data-w="65"></span></li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4><span class="accent">→</span> Backend</h4>
+          <ul>
+            <li>Java Spring Boot <span class="bar" data-w="90"></span></li>
+            <li>REST APIs <span class="bar" data-w="88"></span></li>
+            <li>PHP <span class="bar" data-w="72"></span></li>
+            <li>Node.js <span class="bar" data-w="68"></span></li>
+            <li>Python <span class="bar" data-w="60"></span></li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4><span class="accent">→</span> Data &amp; DevOps</h4>
+          <ul>
+            <li>PostgreSQL <span class="bar" data-w="90"></span></li>
+            <li>MySQL <span class="bar" data-w="82"></span></li>
+            <li>Docker <span class="bar" data-w="78"></span></li>
+            <li>Git / GitHub / GitLab <span class="bar" data-w="88"></span></li>
+            <li>Linux <span class="bar" data-w="75"></span></li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4><span class="accent">→</span> Testing &amp; Otros</h4>
+          <ul>
+            <li>JUnit / Jest / Mocha <span class="bar" data-w="70"></span></li>
+            <li>Postman <span class="bar" data-w="85"></span></li>
+            <li>Scrum / Kanban <span class="bar" data-w="82"></span></li>
+            <li>AWS / Firebase <span class="bar" data-w="55"></span></li>
+            <li>IntelliJ / VS Code <span class="bar" data-w="92"></span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -395,44 +345,46 @@
   <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">05</span>
-        <h2 class="section-title">Contact</h2>
-      </div>
-      <div class="contact-inner reveal">
-        <div class="contact-text">
-          <h3 class="contact-heading">¿Trabajamos juntos?</h3>
-          <p>Estoy abierta a nuevas oportunidades, proyectos freelance y colaboraciones. Si buscas una desarrolladora Full Stack con experiencia en entornos productivos y ganas de seguir creciendo, hablemos.</p>
-        </div>
+      <div class="section-label">05 · contact</div>
+      <div class="contact-inner">
+        <h2 class="section-title contact-title">¿Hablamos<br/><em>de tu proyecto?</em></h2>
+        <p class="contact-sub">Disponible para proyectos freelance, consultoría y oportunidades en desarrollo Full Stack.</p>
         <div class="contact-links">
           <a href="mailto:moralessfaby1@gmail.com" class="contact-item">
-            <span class="contact-icon">✉</span>
+            <span class="ci-label">✉</span>
             <span>moralessfaby1@gmail.com</span>
-          </a>
-          <a href="tel:+59172248669" class="contact-item">
-            <span class="contact-icon">☎</span>
-            <span>(+591) 722 48669</span>
+            <span class="link-arrow">↗</span>
           </a>
           <a href="https://linkedin.com/in/fabiola-morales-dev" target="_blank" class="contact-item">
-            <span class="contact-icon">in</span>
+            <span class="ci-label">in</span>
             <span>fabiola-morales-dev</span>
+            <span class="link-arrow">↗</span>
           </a>
           <a href="https://github.com/FabyMS25" target="_blank" class="contact-item">
-            <span class="contact-icon">gh</span>
+            <span class="ci-label">gh</span>
             <span>FabyMS25</span>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a href="tel:+59172248669" class="contact-item">
+            <span class="ci-label">☎</span>
+            <span>(+591) 72248669</span>
+            <span class="link-arrow">↗</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>Fabiola Morales © 2025 · Quillacollo, Bolivia · Hecho con ♥ y código</p>
+      <div class="footer-inner">
+        <span class="footer-logo">FM<span class="accent">.</span></span>
+        <span class="footer-copy">Fabiola Morales · Quillacollo, Bolivia · 2025</span>
+        <span class="footer-built">Built with code <span class="accent">♥</span></span>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
