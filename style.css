@@ -477,15 +477,25 @@ body.lang-switching [data-i18n] { opacity: 0; transition: opacity 0.15s; }
 .project-card:hover h3 { color: var(--accent); }
 
 .project-card.featured {
-  grid-column: span 2;
+  grid-column: span 1;
   background: var(--surface);
-  border-left: 2px solid var(--accent-deep);
+  border-top: 2px solid var(--accent-deep);
+  position: relative;
 }
+/* First featured gets left border accent, second gets right */
+.project-card.featured:first-child { border-left: 2px solid var(--accent-deep); border-top: none; }
 .project-card.featured::after { transform: scaleX(1); }
 .project-card.featured h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background: linear-gradient(135deg, var(--text), var(--accent));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+/* When two featured cards are adjacent, span the full two columns as a pair */
+.projects-grid .project-card.featured:nth-child(1),
+.projects-grid .project-card.featured:nth-child(2) {
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid var(--accent-deep);
 }
 
 .project-top {
