@@ -22,6 +22,7 @@
       <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
       <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="templates.html" data-i18n="nav.templates" class="nav-templates-link">Templates</a></li>
     </ul>
     <div class="nav-right">
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
@@ -42,6 +43,7 @@
       <li><a href="#projects" class="mobile-link" data-i18n="nav.projects">Projects</a></li>
       <li><a href="#skills" class="mobile-link" data-i18n="nav.skills">Skills</a></li>
       <li><a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="templates.html" class="mobile-link" data-i18n="nav.templates">Templates</a></li>
     </ul>
     <button class="lang-toggle mobile-lang" id="langToggleMobile">
       <span class="lang-opt active" id="langENm">EN</span>
@@ -438,6 +440,60 @@
     </div>
   </section>
 
+
+  <!-- TEMPLATES SECTION -->
+  <section class="templates-section section" id="templates">
+    <div class="container">
+      <div class="section-label" data-i18n="tmpl.label">06 · templates</div>
+      <div class="templates-header">
+        <h2 class="section-title">
+          <span data-i18n="tmpl.title1">Web</span><br/>
+          <em data-i18n="tmpl.title2">templates.</em>
+        </h2>
+        <a href="templates.html" class="btn-ghost templates-view-all" data-i18n="tmpl.viewall">View all templates ↗</a>
+      </div>
+      <p class="templates-sub" data-i18n="tmpl.sub">A collection of web templates and UI designs available for projects. Click any card to preview.</p>
+      <div class="templates-grid" id="templatesGrid">
+        <!-- Populated by templates.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <div class="lightbox-preview">
+        <div class="lightbox-browser-bar">
+          <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+          <span class="browser-url" id="lightboxUrl"></span>
+        </div>
+        <div class="lightbox-img-wrap">
+          <img id="lightboxImg" src="" alt="Template preview" />
+          <div class="lightbox-iframe-overlay">
+            <a id="lightboxLiveBtn" href="#" target="_blank" class="btn-primary" data-i18n="tmpl.openlive">Open live ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="lightbox-info">
+        <div class="lightbox-meta">
+          <span class="lightbox-num" id="lightboxNum">01</span>
+          <div class="lightbox-tags" id="lightboxTags"></div>
+        </div>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+        <div class="lightbox-actions">
+          <a id="lightboxDetailBtn" href="templates.html" class="btn-primary" data-i18n="tmpl.details">View details ↗</a>
+          <a id="lightboxLiveBtnBottom" href="#" target="_blank" class="btn-ghost" data-i18n="tmpl.openlive2">Open live site ↗</a>
+        </div>
+        <div class="lightbox-nav">
+          <button class="lb-nav-btn" id="lbPrev">← <span data-i18n="tmpl.prev">Prev</span></button>
+          <button class="lb-nav-btn" id="lbNext"><span data-i18n="tmpl.next">Next</span> →</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -448,6 +504,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="templates.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
