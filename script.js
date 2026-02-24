@@ -72,6 +72,20 @@ const translations = {
     "contact.label": "05 · contact",
     "contact.title1": "Let's talk about", "contact.title2": "your project.",
     "contact.sub": "Available for freelance projects, consulting, and full-stack development opportunities.",
+
+    "nav.templates": "templates",
+    "tmpl.label": "06 · templates",
+    "tmpl.title1": "Web",
+    "tmpl.title2": "templates.",
+    "tmpl.sub": "A collection of web templates and UI designs available for projects. Click any card to preview.",
+    "tmpl.viewall": "View all templates ↗",
+    "tmpl.openlive": "Open live ↗",
+    "tmpl.openlive2": "Open live site ↗",
+    "tmpl.details": "View full details ↗",
+    "tmpl.prev": "Prev",
+    "tmpl.next": "Next",
+    "tmpl.back": "Back to portfolio",
+    "tmpl.page.sub": "All web templates and UI designs I've built. Each one is available for use in projects — click the live link to see it in action.",
     "footer.built": "Built with code ♥"
   },
 
@@ -140,6 +154,20 @@ const translations = {
     "contact.label": "05 · contacto",
     "contact.title1": "¿Hablamos sobre", "contact.title2": "tu proyecto?",
     "contact.sub": "Disponible para proyectos freelance, consultoría y oportunidades en desarrollo Full Stack.",
+
+    "nav.templates": "plantillas",
+    "tmpl.label": "06 · plantillas",
+    "tmpl.title1": "Plantillas",
+    "tmpl.title2": "web.",
+    "tmpl.sub": "Una colección de plantillas web y diseños UI disponibles para proyectos. Haz clic en cualquier tarjeta para previsualizar.",
+    "tmpl.viewall": "Ver todas las plantillas ↗",
+    "tmpl.openlive": "Abrir en vivo ↗",
+    "tmpl.openlive2": "Abrir sitio en vivo ↗",
+    "tmpl.details": "Ver detalles completos ↗",
+    "tmpl.prev": "Ant",
+    "tmpl.next": "Sig",
+    "tmpl.back": "Volver al portafolio",
+    "tmpl.page.sub": "Todas las plantillas web y diseños UI que he construido. Cada una está disponible para proyectos — haz clic en el enlace en vivo para verla en acción.",
     "footer.built": "Hecho con código ♥"
   }
 };
