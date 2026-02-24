@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates · Fabiola Morales</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:opsz,ital,wght@9..144,0..1,300..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">FM<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+      <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="index.html#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="index.html#skills" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="templates.html" data-i18n="nav.templates" class="nav-templates-link active">Templates</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-opt active" id="langEN">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" id="langES">ES</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#about" class="mobile-link" data-i18n="nav.about">About</a></li>
+      <li><a href="index.html#experience" class="mobile-link" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="index.html#projects" class="mobile-link" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="index.html#skills" class="mobile-link" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="index.html#contact" class="mobile-link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="templates.html" class="mobile-link" data-i18n="nav.templates">Templates</a></li>
+    </ul>
+    <button class="lang-toggle mobile-lang" id="langToggleMobile">
+      <span class="lang-opt active" id="langENm">EN</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-opt" id="langESm">ES</span>
+    </button>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="tmpl-page-hero">
+    <div class="container">
+      <a href="index.html" class="back-link">← <span data-i18n="tmpl.back">Back to portfolio</span></a>
+      <div class="section-label" data-i18n="tmpl.label">06 · templates</div>
+      <h1 class="section-title" style="margin-bottom: 0.5rem;">
+        <span data-i18n="tmpl.title1">Web</span><br/>
+        <em data-i18n="tmpl.title2">templates.</em>
+      </h1>
+      <p style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted2); margin-top: 1rem; max-width: 500px; line-height: 1.8;" data-i18n="tmpl.page.sub">
+        All web templates and UI designs I've built. Each one is available for use in projects — click the live link to see it in action.
+      </p>
+    </div>
+  </div>
+
+  <!-- FULL GRID -->
+  <section class="section" style="background: var(--bg); padding-top: 0;">
+    <div class="container" style="padding-top: 3rem;">
+      <div class="tmpl-page-grid" id="tmplPageGrid">
+        <!-- Populated by templates.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-logo">FM<span class="accent">.</span></a>
+        <span class="footer-copy">Fabiola Morales · Quillacollo, Bolivia · 2025</span>
+        <span class="footer-built" data-i18n="footer.built">Built with code <span class="accent">♥</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="templates.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
